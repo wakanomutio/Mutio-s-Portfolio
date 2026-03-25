@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mutio Wakano | Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio website of Mutio Wakano, an IT student and web developer."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <h2 class="logo">My Portfolio<span>.</span></h2>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="intro">Hello, I’m</p>
+          <h1>Mutio Wakano</h1>
+          <h2>IT Student | Web Developer | Problem Solver</h2>
+          <p class="hero-description">
+            I build modern and practical web solutions using HTML, CSS,
+            JavaScript, Django, Node.js, and databases such as MySQL and MongoDB.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary-btn">View My Projects</a>
+            <a href="#contact" class="btn secondary-btn">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="images/profile.jpeg" alt="Mutio Wakano profile photo" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-card reveal">
+          <p>
+            I am an IT student passionate about creating useful digital systems
+            that solve real-world problems. I enjoy frontend and backend
+            development, designing modern interfaces, and building complete
+            web-based solutions.
+          </p>
+          <p>
+            Some of the systems I have worked on include artisan hiring
+            platforms, smart agricultural platforms, and full-stack academic
+            projects using Django, Node.js, MySQL, and MongoDB.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt-section">
+      <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card reveal">HTML5</div>
+          <div class="skill-card reveal">CSS3</div>
+          <div class="skill-card reveal">JavaScript</div>
+          <div class="skill-card reveal">Python</div>
+          <div class="skill-card reveal">Django</div>
+          <div class="skill-card reveal">Node.js</div>
+          <div class="skill-card reveal">MySQL</div>
+          <div class="skill-card reveal">MongoDB</div>
+          <div class="skill-card reveal">Git &amp; GitHub</div>
+          <div class="skill-card reveal">Responsive Design</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <h3>Fundi KaziSmart</h3>
+            <p>
+              A platform that connects homeowners with vetted service providers.
+              It focuses on verification, trust, and easy access to skilled workers.
+            </p>
+            <p><strong>Tech:</strong> Django, MySQL, HTML, CSS, JavaScript</p>
+            <div class="project-links">
+              <a href="https://github.com/wakanomutio/Fundi-KaziSmart.git" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <h3>MavunoLink</h3>
+            <p>
+              A smart agricultural marketplace and verification system that helps
+              farmers identify trusted agricultural inputs and services.
+            </p>
+            <p><strong>Tech:</strong> Node.js, MongoDB, HTML, CSS, JavaScript</p>
+            <div class="project-links">
+              <a href="https://github.com/wakanomutio/MavunoLink.git" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <h3>TamaleShea.com (Client Project)</h3>
+
+            <img src="images/tamale.png" alt="Tamale Shea Website Screenshot" />
+
+            <p>
+              Developed a fully responsive e-commerce website for a client using
+              Hostinger. The platform showcases natural shea butter products with
+              a clean, modern design and optimized user experience to support
+              online sales.
+            </p>
+
+            <p><strong>Key Features:</strong></p>
+            <ul>
+              <li>Mobile-friendly responsive design</li>
+              <li>Product showcase and catalog</li>
+              <li>Clean UI/UX for better customer engagement</li>
+              <li>Optimized for performance and usability</li>
+            </ul>
+
+            <p><strong>Tech:</strong> Hostinger Website Builder, HTML, CSS</p>
+
+            <div class="project-links">
+              <a href="https://tamaleshea.com" target="_blank">Live Site</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt-section">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-card reveal">
+          <p><strong>Name:</strong> Mutio Wakano</p>
+          <p><strong>Email:</strong> <a href="mailto:mutiowakano@gmail.com">mutiowakano@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+254114770091">+254 114770091</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/wakanomutio" target="_blank">github.com/wakanomutio</a></p>
+          <p><strong>Location:</strong> Nairobi, Kenya</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Mutio Wakano. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
