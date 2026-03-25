@@ -275,17 +275,64 @@ body {
 
 .dark-mode {
   background: #0f172a;
-  color: white;
+  color: #f1f5f9;
 }
 
 .dark-mode .section,
 .dark-mode .alt-section {
   background: #1e293b;
+  color: #f1f5f9;
 }
 
 .dark-mode .project-card,
 .dark-mode .about-card,
 .dark-mode .contact-card {
   background: #334155;
-  color: white;
+  color: #f1f5f9;
+}
+
+/* Links */
+.dark-mode a {
+  color: #38bdf8;
+}
+
+/* Buttons */
+.dark-mode .primary-btn {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.dark-mode .secondary-btn {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+/* Footer */
+.dark-mode .footer {
+  background: #020617;
+  color: #f1f5f9;
+}
+
+.dark-mode .hero {
+  background: linear-gradient(135deg, #020617, #1e293b);
+}
+
+/* Dark mode fix for skills section */
+.dark-mode #skills {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+.dark-mode .skills-grid {
+  background: transparent;
+}
+
+.dark-mode .skill-card {
+  background: #334155;
+  color: #f8fafc;
+  border: 1px solid #475569;
+}
+
+.dark-mode .section-title {
+  color: #f8fafc;
 }
