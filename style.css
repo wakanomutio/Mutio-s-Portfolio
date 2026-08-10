@@ -55,6 +55,7 @@ body {
     width:60px;
     height:60px;
     object-fit:contain;
+    border-radius:50%;
 }
 
 .logo{
@@ -267,20 +268,406 @@ body {
 
 }
 
-/* SKILLS */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+/* =========================================
+   PROFESSIONAL EXPERIENCE
+========================================= */
+
+#experience {
+    position: relative;
 }
 
-.skill-card {
-  background: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+/* Experience Card */
+
+.experience-card {
+    position: relative;
+    max-width: 950px;
+    margin: 55px auto 0;
+    padding: 40px;
+    background: var(--card-bg, #ffffff);
+    border: 1px solid rgba(37, 99, 235, 0.10);
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+/* Decorative line at the top */
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #3b82f6,
+        #60a5fa
+    );
+}
+
+/* Hover effect */
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+    border-color: rgba(37, 99, 235, 0.25);
+}
+
+/* Header */
+
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+/* Small Label */
+
+.experience-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Job Title */
+
+.experience-card h3 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Date */
+
+.experience-date {
+    flex-shrink: 0;
+    padding: 9px 18px;
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    border-radius: 50px;
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Description */
+
+.experience-card > p {
+    max-width: 850px;
+    margin-bottom: 25px;
+    color: #5f6368;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Responsibilities */
+
+.experience-card ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 35px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Individual responsibility */
+
+.experience-card li {
+    position: relative;
+    padding-left: 25px;
+    color: #4b5563;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Blue check */
+
+.experience-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: #2563eb;
+    font-weight: 800;
+}
+
+/* Technology section */
+
+.experience-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Technology badges */
+
+.experience-tech span {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 50px;
+    background: #f8fafc;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+/* Technology hover */
+
+.experience-tech span:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .experience-card {
+        padding: 30px 25px;
+        margin-top: 40px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .experience-card h3 {
+        font-size: 25px;
+    }
+
+    .experience-date {
+        align-self: flex-start;
+    }
+
+    .experience-card ul {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .experience-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .experience-card h3 {
+        font-size: 22px;
+    }
+
+    .experience-label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .experience-date {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .experience-card > p {
+        font-size: 15px;
+    }
+
+    .experience-card li {
+        font-size: 14px;
+    }
+
+}
+
+/* =========================================
+   TECHNICAL SKILLS
+========================================= */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 55px auto 0;
+}
+
+.technical-skill-card {
+    position: relative;
+    display: flex;
+    gap: 22px;
+    padding: 30px;
+    background: var(--card-bg, #ffffff);
+    border: 1px solid rgba(37, 99, 235, 0.10);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.technical-skill-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+    border-color: rgba(37, 99, 235, 0.25);
+}
+
+
+/* Skill Icon */
+
+.skill-icon {
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: rgba(37, 99, 235, 0.09);
+    color: #2563eb;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+.technical-skill-card:hover .skill-icon {
+    transform: rotate(-5deg) scale(1.05);
+    background: rgba(37, 99, 235, 0.15);
+}
+
+
+/* Content */
+
+.skill-card-content {
+    flex: 1;
+}
+
+.skill-card-content h3 {
+    margin: 0 0 10px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.skill-card-content p {
+    margin-bottom: 20px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Skill Tags */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span {
+    padding: 7px 12px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 50px;
+
+    background: #f8fafc;
+    color: #374151;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.skill-tags span:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+
+/* =========================================
+   SKILLS RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .skills-container {
+        margin-top: 40px;
+    }
+
+    .technical-skill-card {
+        padding: 25px;
+        gap: 17px;
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .skill-card-content h3 {
+        font-size: 19px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .technical-skill-card {
+        flex-direction: column;
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+    }
+
 }
 
 /* ===========================
